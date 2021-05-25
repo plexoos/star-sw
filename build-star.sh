@@ -29,8 +29,9 @@ cons +StRoot/StBbcSimulationMaker/
 cons +StRoot/StBeamBackMaker/
 cons +StRoot/StBichsel/
 cons +StRoot/StChain/
-cons +StRoot/StDAQMaker/
+# StDaqLib must be built before StDAQMaker
 cons +StRoot/StDaqLib/
+cons +StRoot/StDAQMaker/
 cons +StRoot/StDataFilterMaker/
 cons +StRoot/StDbBroker/
 cons +StRoot/StDbLib/
