@@ -11,18 +11,10 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Build with Docker
         uses: docker/build-push-action@v2
         with:
           cache-from: type=registry,ref=ghcr.io/star-bnl/star-sw-base-root5
-          cache-to:   type=registry,ref=ghcr.io/star-bnl/star-sw-base-root5
-          push: true
+          push: false
           tags: ghcr.io/star-bnl/star-sw-base-root5
           file: docker/Dockerfile.root5
