@@ -7,7 +7,6 @@ on:
 jobs:
   runtestcontainer:
     runs-on: ubuntu-latest
-    container: ghcr.io/star-bnl/star-test-data
     steps:
-      - run: ls -la /
-      - run: find /star-test-data
+      - run: docker run --name star-test-data --volume /star-test-data ghcr.io/star-bnl/star-test-data
+      - run: docker run --rm --volumes-from star-test-data ghcr.io/star-bnl/star-sw-root5-base sh -c `ls -la /; find /star-test-data`
