@@ -9,4 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: docker run --name star-test-data --volume /star-test-data ghcr.io/star-bnl/star-test-data
-      - run: docker run --rm --volumes-from star-test-data ghcr.io/star-bnl/star-sw-root5-base sh -c `ls -la /; find /star-test-data`
+      - run: docker images
+      - run: docker run --rm --volumes-from star-test-data ghcr.io/star-bnl/star-sw-root5-base ls -la
