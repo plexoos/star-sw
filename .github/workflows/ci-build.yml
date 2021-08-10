@@ -5,14 +5,6 @@ on:
     branches: main
 
 jobs:
-  runtest:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        run: ['run1', 'run2']
-    steps:
-      - run: echo Run ${{ matrix.run }}
-      - run: date
   runtestcontainer:
     runs-on: ubuntu-latest
     container: ghcr.io/star-bnl/star-test-data
