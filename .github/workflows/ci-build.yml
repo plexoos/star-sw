@@ -39,3 +39,9 @@ jobs:
     steps:
       - run: echo Run ${{ matrix.run }}
       - run: date
+  runtestcontainer:
+    runs-on: ubuntu-latest
+    container: ghcr.io/star-bnl/star-test-data
+    steps:
+      - run: pwd
+      - run: find .
