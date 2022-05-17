@@ -1,16 +1,9 @@
 name: Build Containers
 
-on:
-  push:
-    branches:
-      - main
-      - 'SL*'
-    tags:
-      - '*'
+on: [push]
 
 jobs:
   build:
-    if: github.repository_owner == 'star-bnl'
     runs-on: ubuntu-latest
     strategy:
       matrix:
