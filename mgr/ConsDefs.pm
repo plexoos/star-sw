@@ -153,7 +153,7 @@
 	    $G77FLAGS  = "$XMACHOPT -fd-lines-as-code ";
 	}
 
-	$G77FLAGS .= " -std=legacy -fno-second-underscore -w -fno-automatic -Wall -W -Wsurprising -fPIC";
+	$G77FLAGS .= " -std=legacy -fallow-invalid-boz -fno-second-underscore -w -fno-automatic -Wall -W -Wsurprising -fPIC";
 	
 	$FFLAGS    = $G77FLAGS;     # will be overwritten below, ignore
 	$FLIBS     = "-lgfortran -lquadmath";
